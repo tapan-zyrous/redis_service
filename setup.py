@@ -10,6 +10,7 @@ setup(
     package_dir={"": "src"},
     packages=find_packages(where="src"),
     namespace_packages=["redis_service"],
+    entry_points={"redis_service_plugins": ["cache = redis_service.cache"]},
     install_requires=[
         'redis',
         'strawberry-graphql[debug-server]'
